@@ -8,7 +8,7 @@ def make_one_hot_vector(dims, hot):
     v[hot] = 1.
     return v
 
-class SanFranciscoCrimeDate(object):
+class SanFranciscoCrimeData(object):
     # Dates
     # Category (TARGET)
     # Descript (Only train.csv)
@@ -35,12 +35,12 @@ class SanFranciscoCrimeDate(object):
         self.test_df = pd.read_csv(self.test_data_name)
 
         # PdDistrict
-        pd = list(set(train_df['PdDistrict']))
-        pd.sort()
-        self.pd_dict = {p:i for i, p in enumerate(pd)}
+        pdd = list(set(self.train_df['PdDistrict']))
+        pdd.sort()
+        self.pd_dict = {p:i for i, p in enumerate(pdd)}
 
         # Category
-        cat = list(set(train_df['Category']))
+        cat = list(set(self.train_df['Category']))
         cat.sort()
         self.cat_dict = {c:i for i, c in enumerate(cat)}
 
