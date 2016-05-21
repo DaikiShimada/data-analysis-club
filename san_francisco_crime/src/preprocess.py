@@ -64,5 +64,5 @@ class SanFranciscoCrimeData(object):
         return make_one_hot_vector(len(self.cat_dict), self.cat_dict[cat])
 
     def get_category_matrix(self):
-        return np.asarray([self.get_category_vector(c) for c in self.train_df['Category']]
+        return np.asarray([self.get_category_vector(c) for c in self.train_df['Category']])
 
