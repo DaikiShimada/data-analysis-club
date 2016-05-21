@@ -7,3 +7,5 @@ import sklearn
 import preprocess
 
 data = preprocess.SanFranciscoCrimeData()
+y = data.get_category_matrix()
+print y.shape
